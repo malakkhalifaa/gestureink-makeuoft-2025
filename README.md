@@ -10,6 +10,42 @@ This project implements a hand gesture-controlled writing system using OpenCV, c
 ### Hardware Integration: 
 - Pen Colour Selection using LED light switches
 - Buzzer to indicate hand is not within camera frame
+### Live camera feed 
+- Displays a small overlay of the user's hand movements
+- Includes whiteboard backdrop and displays registered drawings
+
+## Requirements 
+### Python 
+- Python 3.12
+- cvzone
+- OpenCV
+- Numpy
+### Arduino 
+- Buzzer
+- LED lights
+- Switches
+- Arduino UNO Wifi
+- Arduino IDE
+
+## Installation 
+
+## Usage 
+
+## Limitations/ Known Issues 
+- Only one camera to track hand movement i.e. can only use at one stationary spot 
+- Non-inclusive hand recognition (software is unable to read broad range of skin tones)
+- Laggy strokes due to human factors (e.g. shaky hands) 
+
+## Future Improvements 
+- Utilizing ML to optimize stroke/ pen flow
+- Include colour sensors/threshold to tailor to user's skin tone colour
+- Integration with external camera source (i.e. ESP32-CAM)
+
+
+
+
+
+
 
 
  
