@@ -10,6 +10,7 @@ import re
 width, height = 1280, 720
 gesture_threshold = 300
 folder_path = "Presentation"
+outofboundstopic = "python/buzzer"
 
 # Camera Setup
 capture = cv2.VideoCapture(0)
@@ -32,7 +33,6 @@ annotation_index = -1
 annotation_started = False
 small_img_height, small_img_width = int(120 * 1), int(213 * 1)  # width and height of the small image
 rgb_value = (0, 0, 0)
-outofboundstopic = "python/buzzer"
 
 # MQTT Login info
 URL = "82a6cf24592241609f0c78d6c926b55d.s1.eu.hivemq.cloud"
@@ -58,7 +58,7 @@ def parse_rgb_message(message):
     red, green, blue = map(int, match.groups())
 
     # Convert binary (0/1) to 8-bit RGB (0 or 255)
-    rgb_value = (red*255, green * 255, blue * 255)
+    rgb_value = (red * 255, green * 255, blue * 255)
     return rgb_value
 
 def on_msg(client, userdata, message: mq.MQTTMessage):
@@ -67,7 +67,8 @@ def on_msg(client, userdata, message: mq.MQTTMessage):
     if topic == "arduino/glove/colour":
         msg = message.payload.decode("utf-8")
         rgb_value = parse_rgb_message(msg)
-        print("topic", topic, "message", rgb_value)
+        print("Received MQTT message on topic:", topic)
+        print("Parsed RGB value:", rgb_value)
 
 def on_send(client, userdata, mid, reason_code, properties):
     print(mid, "published")
@@ -100,6 +101,9 @@ while True:
     frame = cv2.flip(frame, 1)
     current_image_path = os.path.join(folder_path, image_paths[current_image_index])
     current_image = cv2.imread(current_image_path)
+
+    # Resize presentation image to match frame size
+    current_image = cv2.resize(current_image, (width, height))
 
     # Detect hand and landmarks
     hands, frame = hand_detector.findHands(frame)  # with draw
@@ -140,6 +144,7 @@ while True:
 
         if fingers_up == [0, 1, 1, 0, 0]:
             cv2.circle(current_image, index_finger_position, 12, rgb_value, cv2.FILLED)
+            print(f"Drew circle at {index_finger_position} with color {rgb_value}")
 
         if fingers_up == [0, 1, 0, 0, 0]:
             if not annotation_started:
@@ -148,6 +153,7 @@ while True:
                 annotations.append([])
             annotations[annotation_index].append(index_finger_position)
             cv2.circle(current_image, index_finger_position, 12, rgb_value, cv2.FILLED)
+            print(f"Drawing annotation at {index_finger_position} with color {rgb_value}")
         else:
             annotation_started = False
 
@@ -170,6 +176,7 @@ while True:
         for j in range(len(annotation)):
             if j != 0:
                 cv2.line(current_image, annotation[j - 1], annotation[j], rgb_value, 12)
+                print(f"Drew line from {annotation[j-1]} to {annotation[j]} with color {rgb_value}")
 
     small_img = cv2.resize(frame, (small_img_width, small_img_height))
     img_height, img_width, _ = current_image.shape
