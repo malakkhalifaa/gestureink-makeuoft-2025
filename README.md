@@ -1,56 +1,64 @@
-# Gesture Ink
-## Overview
-This project implements a hand gesture-controlled writing system using OpenCV, cvzone, and a webcam. This project is integrated with wearable technologies hardware (i.e. gloves and a camera headpiece powered by Arduino) and will translate hand gestures into a digital drawing. 
+# ✨ Gesture Ink - Hand Gesture Writing & Drawing System  
 
-## 🚀 Features 
-### 1. ✏️ Drawing/Writing Mode
-- ✌️ Index & Middle Finger Up - Activate drawing mode
-- ☝️ Index Finger Up - Continue drawing
-- 🤟 Three Fingers Up - Undo last annotation
+Gesture Ink is a **real-time hand gesture-controlled writing system** using **OpenCV, cvzone, and MQTT integration**. It allows users to **write and draw using only hand movements**, with **dynamic color selection** and **buzzer alerts** for out-of-bounds gestures.  
 
-### 2. 🌈 Pen Colour Selection: 
-- Dynamic color changes based on MQTT messages from an external device.
-- LED + switch colour selection modes
+This project integrates with **wearable technology** (glove sensors + MQTT communication) for **gesture-based control**, making it a **powerful assistive tool** for digital art, presentations, and interactive applications.  
 
-### 🎯3. Boundary Notification
-- Buzzer on hardware device will notify user when hand is no longer detected on screen 
+---
 
-### 3. 📡 MQTT Integration
-- Receives RGB values to set the annotation color.
-- Sends buzzer alerts when the user moves outside a defined gesture region.
-- Subscribes to multiple topics to receive updates from an external glove-based system.
+## 📸 Demo & Screenshots  
+### 🎨 **Hand Gesture Writing in Action**  
+![Gesture Drawing](images/drawing_mode.png)  
+> *Index & Middle Fingers Up - Start Drawing*  
 
-### 4. 📷 Webcam & Live Feed
-- Real-time hand gesture detection using OpenCV and cvzone.
-- Small preview window displaying the user's webcam feed.
+### 🎨 **Changing Colors via MQTT**  
+![Color Change](images/color_change.png)  
+> *RGB values dynamically update from glove-based sensor inputs.*  
 
-## 📃 Requirements 
-- Python 3.12
-- OpenCV (cv2)
-- NumPy (numpy)
-- cvzone (cvzone)
-- paho-mqtt(paho.mqtt)
-- Arduino IDE (for programming hardware) 
+---
 
-## 👇Installation 
+## 🚀 Features  
 
-## 👩‍💻Usage 
+### **1️⃣ ✏️ Gesture-Based Drawing/Writing**  
+- ✌️ **Index & Middle Finger Up** → Start drawing  
+- ☝️ **Index Finger Up** → Continue drawing  
+- 🤟 **Three Fingers Up** → Undo last annotation  
 
-## 🤔 Limitations/ Known Issues 
-- Only one camera to track hand movement i.e. can only use at one stationary spot 
-- Non-inclusive hand recognition (software is unable to read broad range of skin tones)
-- Laggy strokes due to human factors (e.g. shaky hands) 
+### **2️⃣ 🌈 Dynamic Pen Color Selection via MQTT**  
+- RGB colors update **in real-time** based on MQTT messages.  
+- LED-based **glove control** allows users to **change color modes dynamically**.  
 
-## ⏭️Future Improvements 
-- Utilizing ML to optimize stroke/ pen flow
-- Include colour sensors/threshold to tailor to user's skin tone colour
-- Integration with external camera source (i.e. ESP32-CAM)
+### **3️⃣ 🎯 Boundary Notification System**  
+- **Buzzer Alert 🔊** when the hand moves **out of the drawing area**.  
+- Prevents accidental strokes outside the intended gesture region.  
+
+### **4️⃣ 📡 MQTT Integration for Smart Interactions**  
+- **Receives RGB values** from a glove-based external system.  
+- **Publishes buzzer alerts** when the user moves outside a defined gesture region.  
+- **Subscribes to multiple MQTT topics** to receive real-time updates from an external glove system.  
+
+### **5️⃣ 📷 Webcam & Live Preview**  
+- **Hand gesture detection** using **OpenCV & cvzone**.  
+- **Small live preview window** of the user's webcam for real-time feedback.  
+
+---
+
+## 📃 Requirements  
+
+### **🖥️ Software Requirements**
+- **Python 3.12**  
+- **OpenCV (cv2)** → `pip install opencv-python`  
+- **NumPy (numpy)** → `pip install numpy`  
+- **cvzone (cvzone)** → `pip install cvzone`  
+- **paho-mqtt (paho-mqtt)** → `pip install paho-mqtt`  
+- **Arduino IDE** → For hardware integration with the glove system  
+
+### **🔌 Hardware Requirements**
+- **Webcam** (built-in or external) for hand tracking  
+- **Arduino-compatible glove sensors** for color switching  
+- **Buzzer module** for boundary notifications  
+- **Wi-Fi enabled microcontroller** (ESP32/ESP8266) for MQTT messaging  
+
+---
 
 
-
-
-
-
-
-
- 
