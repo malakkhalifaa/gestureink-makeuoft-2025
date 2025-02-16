@@ -3,17 +3,17 @@
 This project implements a hand gesture-controlled writing system using OpenCV, cvzone, and a webcam. This project is integrated with wearable technologies hardware (i.e. gloves and a camera headpiece powered by Arduino) and will translate hand gestures into a digital drawing. 
 
 ## 🚀 Features 
-### 1. ✏️ Annotation Mode
+### 1. ✏️ Drawing/Writing Mode
 - ✌️ Index & Middle Finger Up - Activate drawing mode
 - ☝️ Index Finger Up - Continue drawing
 - 🤟 Three Fingers Up - Undo last annotation
 
-### 2. Pen Colour Selection: 
-- ✨ Dynamic color changes based on MQTT messages from an external device.
-- 🚨LED + switch colour selection modes
+### 2. 🌈 Pen Colour Selection: 
+- Dynamic color changes based on MQTT messages from an external device.
+- LED + switch colour selection modes
 
-### 3. Boundary Notification
-- ⚡Buzzer on hardware device will notify user when hand is no longer detected on screen 
+### 🎯3. Boundary Notification
+- Buzzer on hardware device will notify user when hand is no longer detected on screen 
 
 ### 3. 📡 MQTT Integration
 - Receives RGB values to set the annotation color.
