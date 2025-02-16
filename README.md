@@ -7,7 +7,7 @@ This project implements a hand gesture-controlled writing system using OpenCV, c
 - Draw function with index finer
 - Lift pen with two fingers
 - Tap with three fingers to undo line
-Hardware Integration: 
+### Hardware Integration: 
 - Pen Colour Selection using LED light switches
 - Buzzer to indicate hand is not within camera frame
 
