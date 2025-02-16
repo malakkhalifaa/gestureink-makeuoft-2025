@@ -12,24 +12,24 @@ This project implements a hand gesture-controlled writing system using OpenCV, c
 
 ### 2. Pen Colour Selection: 
 - ✨ Dynamic color changes based on MQTT messages from an external device.
-- 
+  
 ### 3. 🎯 Slide Navigation
-👈 Left Swipe - Move to the previous slide
+- 👈 Left Swipe - Move to the previous slide
 
-👉 Right Swipe - Move to the next slide
+- 👉 Right Swipe - Move to the next slide
 
 ### 4. 📡 MQTT Integration
-Receives RGB values to set the annotation color.
+- Receives RGB values to set the annotation color.
 
-Sends buzzer alerts when the user moves outside a defined gesture region.
+- Sends buzzer alerts when the user moves outside a defined gesture region.
 
-Subscribes to multiple topics to receive updates from an external glove-based system.
+- Subscribes to multiple topics to receive updates from an external glove-based system.
 
 ### 5. 📷 Webcam & Live Feed
 
-Real-time hand gesture detection using OpenCV and cvzone.
+- Real-time hand gesture detection using OpenCV and cvzone.
 
-Small preview window displaying the user's webcam feed.
+- Small preview window displaying the user's webcam feed.
 
 ## Requirements 
 ### Python 
