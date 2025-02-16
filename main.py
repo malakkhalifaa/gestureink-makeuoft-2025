@@ -2,7 +2,9 @@ import cv2
 import os
 import numpy as np
 from cvzone.HandTrackingModule import HandDetector
-
+import paho.mqtt.enums
+import paho.mqtt.client as mq
+import re
 
 # Parameters
 width, height = 1280, 720
@@ -32,12 +34,71 @@ annotations = [[]]
 annotation_index = -1
 annotation_started = False
 small_img_height, small_img_width = int(120 * 1), int(213 * 1)  # width and height of the small image
+rgb_value = (0, 0, 0)
+outofboundstopic = "python/buzzer"
 
+# MQTT Login info
+URL = "82a6cf24592241609f0c78d6c926b55d.s1.eu.hivemq.cloud"
+USER = "Python"
+PASS = "Cooked234"
+
+PORT = 8883
+VERSION = paho.mqtt.enums.CallbackAPIVersion.VERSION2
+TLS_VERSION = mq.ssl.PROTOCOL_TLS
+
+client = mq.Client(VERSION)
+
+
+
+def on_connect(client, userdata, flags, reason_code, properties):
+    print("Connected with result code", reason_code)
+
+def parse_rgb_message(message):
+    # Extract numbers using regex
+    match = re.search(r'R:\s*(\d+),\s*G:\s*(\d+),\s*B:\s*(\d+)', message)
+    if not match:
+        return "Invalid message format"
+
+    # Convert extracted values to integers
+    red, green, blue = map(int, match.groups())
+
+    # Convert binary (0/1) to 8-bit RGB (0 or 255)
+    rgb_value = (red*255, green * 255, blue * 255)
+    return rgb_value
+
+def on_msg(client, userdata, message:mq.MQTTMessage):
+    topic = message.topic
+    if topic == "arduino/glove/colour":
+        msg = message.payload.decode("utf-8")
+        msg = parse_rgb_message(msg)
+        rgb_value = msg
+        # change colour setting to true/false
+        print("topic", topic, "message", msg)
+        return (topic, msg)
+
+def on_send(client, userdata, mid, reason_code, properties):
+    print(mid, "published")
+
+def on_sub(client, userdata, mid, granted_qos, _):
+    print("granted qos", granted_qos)
 
 # Get list of presentation images
 image_paths = sorted(os.listdir(folder_path), key=len)
 print(image_paths)
 
+# Place the MQTT client setup outside the loop
+client.on_message = on_msg
+client.on_connect = on_connect
+client.on_subscribe = on_sub
+client.on_publish = on_send
+client.username_pw_set(USER, PASS)
+client.tls_set(tls_version=TLS_VERSION)
+#client.tls_insecure_set(False)
+client.connect(URL, PORT)
+
+client.subscribe("arduino/photo", qos=1)
+client.subscribe("arduino/glove/colour", qos=1)
+client.subscribe("arduino/bent", qos=1)
 
 while True:
     # Capture frame
@@ -50,7 +111,7 @@ while True:
     # Detect hand and landmarks
     hands, frame = hand_detector.findHands(frame)  # with draw
     # Draw Gesture Threshold line
-    cv2.line(frame, (0, gesture_threshold), (width, gesture_threshold), (0, 255, 0), 10)
+    cv2.line(frame, (0, gesture_threshold), (width, gesture_threshold), (rgb_value), 10)
 
 
     if hands and not button_is_pressed:  # If hand is detected
@@ -69,6 +130,7 @@ while True:
 
 
         if center_y <= gesture_threshold:  # If hand is at the height of the face
+            client.publish("python/buzzer", "0", qos=1)
             if fingers_up == [1, 0, 0, 0, 0]:
                 print("Left")
                 button_is_pressed = True
@@ -85,10 +147,12 @@ while True:
                     annotations = [[]]
                     annotation_index = -1
                     annotation_started = False
+        else:
+            client.publish("python/buzzer", "1", qos=1)
 
 
         if fingers_up == [0, 1, 1, 0, 0]:
-            cv2.circle(current_image, index_finger_position, 12, (0, 0, 255), cv2.FILLED)
+            cv2.circle(current_image, index_finger_position, 12, (rgb_value), cv2.FILLED)
 
 
         if fingers_up == [0, 1, 0, 0, 0]:
@@ -98,7 +162,7 @@ while True:
                 annotations.append([])
             print(annotation_index)
             annotations[annotation_index].append(index_finger_position)
-            cv2.circle(current_image, index_finger_position, 12, (0, 0, 255), cv2.FILLED)
+            cv2.circle(current_image, index_finger_position, 12, (rgb_value), cv2.FILLED)
 
 
         else:
@@ -126,7 +190,7 @@ while True:
     for i, annotation in enumerate(annotations):
         for j in range(len(annotation)):
             if j != 0:
-                cv2.line(current_image, annotation[j - 1], annotation[j], (0, 0, 200), 12)
+                cv2.line(current_image, annotation[j - 1], annotation[j], ((rgb_value)), 12)
 
 
     small_img = cv2.resize(frame, (small_img_width, small_img_height))
@@ -141,6 +205,8 @@ while True:
     key = cv2.waitKey(1)
     if key == ord('q'):
         break
+
+    client.loop_forever
 
 
 
