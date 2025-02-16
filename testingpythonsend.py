@@ -3,9 +3,9 @@ import paho.mqtt.client as mq
 import re
 
 # MQTT Login info
-URL = "82a6cf24592241609f0c78d6c926b55d.s1.eu.hivemq.cloud"
-USER = "Python"
-PASS = "Cooked234"
+URL = ""
+USER = "n"
+PASS = ""
 
 PORT = 8883
 VERSION = paho.mqtt.enums.CallbackAPIVersion.VERSION2
