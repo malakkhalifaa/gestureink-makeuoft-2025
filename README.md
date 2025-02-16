@@ -32,16 +32,16 @@ This project implements a hand gesture-controlled writing system using OpenCV, c
 - paho-mqtt(paho.mqtt)
 - Arduino IDE (for programming hardware) 
 
-## Installation 
+## 👇Installation 
 
-## Usage 
+## 👩‍💻Usage 
 
-## Limitations/ Known Issues 
+## 🤔 Limitations/ Known Issues 
 - Only one camera to track hand movement i.e. can only use at one stationary spot 
 - Non-inclusive hand recognition (software is unable to read broad range of skin tones)
 - Laggy strokes due to human factors (e.g. shaky hands) 
 
-## Future Improvements 
+## ⏭️Future Improvements 
 - Utilizing ML to optimize stroke/ pen flow
 - Include colour sensors/threshold to tailor to user's skin tone colour
 - Integration with external camera source (i.e. ESP32-CAM)
