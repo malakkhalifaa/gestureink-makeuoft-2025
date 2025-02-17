@@ -7,6 +7,8 @@ This project integrates with **wearable technology** (glove sensors + MQTT commu
 ---
 
 ## 📸 Demo & Screenshots  
+https://youtu.be/lAq6rWafrmU
+
 ### 🎨 **Hand Gesture Writing in Action**  
 ![Gesture Drawing](images/drawing_mode.png)  
 > *Index & Middle Fingers Up - Start Drawing*  
