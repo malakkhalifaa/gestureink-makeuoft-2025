@@ -7,6 +7,8 @@ This project integrates with **wearable technology** (glove sensors + MQTT commu
 ---
 
 ## 📸 Demo & Screenshots  
+
+### 🖼️ Demo Video URL
 https://youtu.be/lAq6rWafrmU
 
 ### 🎨 **Hand Gesture Writing in Action**  
