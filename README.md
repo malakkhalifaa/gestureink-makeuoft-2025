@@ -14,8 +14,8 @@ This project integrates **gesture-based control** with **wearable sensors**, mak
 > **✌️ Index & Middle Fingers Up** → Start drawing  
 ![Gesture Drawing](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
-### 🎨 **Changing Colors via MQTT**  
-> **🧤 Glove Sensors dynamically adjust RGB values**  
+### 🎨 **Group Photo**  
+> **🧤 During presentation we showed the glove gensors dynamically adjusting RGB values**  
 ![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)  
 
 ---
