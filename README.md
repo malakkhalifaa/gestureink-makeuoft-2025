@@ -86,22 +86,22 @@ pip install opencv-python numpy cvzone paho-mqtt
 ```
 
 🔌 Hardware Setup
-1️⃣ Connect the ESP32/ESP8266 to your computer and upload the glove firmware using Arduino IDE.
-2️⃣ Attach flex sensors to the glove to detect finger positions.
-3️⃣ Connect the buzzer to the microcontroller for out-of-bounds alerts.
-4️⃣ Configure MQTT broker and update the broker address in the Python script.
+### **1️⃣ Connect the ESP32/ESP8266 to your computer and upload the glove firmware using Arduino IDE.
+### **2️⃣ Attach flex sensors to the glove to detect finger positions.
+### **3️⃣ Connect the buzzer to the microcontroller for out-of-bounds alerts.
+### **4️⃣ Configure MQTT broker and update the broker address in the Python script.
 
 🔥 Future Improvements
-1️⃣ AI-Based Handwriting Recognition
+### **1️⃣ AI-Based Handwriting Recognition
 Convert air-written text into actual editable text using machine learning models.
 Potential integration with Google Handwriting Recognition API.
-2️⃣ Customizable Drawing Thickness & Pressure Sensitivity
+### **2️⃣ Customizable Drawing Thickness & Pressure Sensitivity
 Allow users to adjust brush size by modifying their finger pressure using sensor data.
 Dynamic brush thickness scaling with movement speed.
-3️⃣ Integration with VR/AR Systems
+### **3️⃣ Integration with VR/AR Systems
 Create a virtual reality whiteboard where users can write & draw in a 3D space.
 Support for Leap Motion or Meta Quest hand tracking.
-4️⃣ Cloud Sync & Multi-Device Support
+### **4️⃣ Cloud Sync & Multi-Device Support
 Store gesture-based notes in the cloud for cross-device access.
 Integrate Firebase or Google Drive API to save & retrieve handwritten data.
 
