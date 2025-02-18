@@ -1,66 +1,85 @@
 # ✨ Gesture Ink - Hand Gesture Writing & Drawing System  
 
-Gesture Ink is a **real-time hand gesture-controlled writing system** using **OpenCV, cvzone, and MQTT integration**. It allows users to **write and draw using only hand movements**, with **dynamic color selection** and **buzzer alerts** for out-of-bounds gestures.  
+Gesture Ink is a **real-time hand gesture-controlled writing system** powered by **computer vision, MQTT communication, and wearable technology**. It allows users to **write and draw using only hand movements**, with **dynamic color selection** and **buzzer alerts** for out-of-bounds gestures.  
 
-This project integrates with **wearable technology** (glove sensors + MQTT communication) for **gesture-based control**, making it a **powerful assistive tool** for digital art, presentations, and interactive applications.  
+This project integrates **gesture-based control** with **wearable sensors**, making it an innovative tool for **digital art, interactive presentations, assistive technology, and smart interfaces**.  
 
 ---
 
 ## 📸 Demo & Screenshots  
 
-### 🎨 **Changing Colors via MQTT, Look at Demo video below**
-https://youtu.be/lAq6rWafrmU
-Team![PHOTO-2025-02-17-08-41-46](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)
+### 🎥 **[Check out the Demo](https://youtu.be/lAq6rWafrmU)**  
 
-### 🎨 **Hand Gesture Writing in Action**  
-> *Index & Middle Fingers Up - Start Drawing*  
-Gesture Drawing![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
+### 🖼️ **Hand Gesture Writing in Action**  
+> **✌️ Index & Middle Fingers Up** → Start drawing  
+![Gesture Drawing](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
+### 🎨 **Changing Colors via MQTT**  
+> **🧤 Glove Sensors dynamically adjust RGB values**  
+![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)  
 
 ---
 
-## 🚀 Features  
+## 🚀 Key Features  
 
-### **1️⃣ ✏️ Gesture-Based Drawing/Writing**  
-- ✌️ **Index & Middle Finger Up** → Start drawing  
-- ☝️ **Index Finger Up** → Continue drawing  
-- 🤟 **Three Fingers Up** → Undo last annotation  
+### **1️⃣ ✏️ Gesture-Based Drawing & Writing**  
+- **✌️ Index & Middle Finger Up** → Start drawing  
+- **☝️ Index Finger Up** → Continue drawing  
+- **🤟 Three Fingers Up** → Undo last annotation  
+- **🛑 Closed Fist** → Stop drawing  
 
 ### **2️⃣ 🌈 Dynamic Pen Color Selection via MQTT**  
-- RGB colors update **in real-time** based on MQTT messages.  
-- LED-based **glove control** allows users to **change color modes dynamically**.  
+- **RGB values update dynamically** based on **glove-based sensor inputs**.  
+- **LED-based glove controls** allow users to switch colors **without touching a screen**.  
 
 ### **3️⃣ 🎯 Boundary Notification System**  
 - **Buzzer Alert 🔊** when the hand moves **out of the drawing area**.  
-- Prevents accidental strokes outside the intended gesture region.  
+- **Real-time feedback** prevents accidental strokes outside the gesture region.  
 
 ### **4️⃣ 📡 MQTT Integration for Smart Interactions**  
-- **Receives RGB values** from a glove-based external system.  
-- **Publishes buzzer alerts** when the user moves outside a defined gesture region.  
-- **Subscribes to multiple MQTT topics** to receive real-time updates from an external glove system.  
+- **Receives real-time RGB values** from an external **glove-based sensor system**.  
+- **Publishes buzzer alerts** when the user moves outside a defined drawing region.  
+- **Subscribes to multiple MQTT topics** to enable seamless data exchange.  
 
-### **5️⃣ 📷 Webcam & Live Preview**  
-- **Hand gesture detection** using **OpenCV & cvzone**.  
-- **Small live preview window** of the user's webcam for real-time feedback.  
+### **5️⃣ 📷 Real-Time Webcam Hand Tracking**  
+- **Hand gesture recognition** using **OpenCV & cvzone**.  
+- **Live preview window** for real-time interaction feedback.  
 
----
-
-## 📃 Requirements  
-
-### **🖥️ Software Requirements**
-- **Python 3.12**  
-- **OpenCV (cv2)** → `pip install opencv-python`  
-- **NumPy (numpy)** → `pip install numpy`  
-- **cvzone (cvzone)** → `pip install cvzone`  
-- **paho-mqtt (paho-mqtt)** → `pip install paho-mqtt`  
-- **Arduino IDE** → For hardware integration with the glove system  
-
-### **🔌 Hardware Requirements**
-- **Webcam** (built-in or external) for hand tracking  
-- **Arduino-compatible glove sensors** for color switching  
-- **Buzzer module** for boundary notifications  
-
+### **6️⃣ 🔄 Undo & Clear Options**  
+- **Undo previous strokes** with **hand gestures**.  
+- **Clear the screen** with a **custom reset action**.  
 
 ---
 
+## 🛠️ Technologies Used  
 
+### **1️⃣ Computer Vision & Gesture Recognition**  
+- **[OpenCV](https://opencv.org/)** → Real-time hand tracking & gesture detection  
+- **[cvzone](https://github.com/cvzone/cvzone)** → Simplified hand detection using MediaPipe  
+- **[NumPy](https://numpy.org/)** → Image processing and mathematical operations  
+
+### **2️⃣ IoT & MQTT-Based Communication**  
+- **[paho-mqtt](https://www.eclipse.org/paho/)** → MQTT protocol for real-time data exchange  
+- **[ESP32/ESP8266](https://www.espressif.com/)** → Wi-Fi-enabled microcontroller for sending RGB color updates  
+- **[Arduino IDE](https://www.arduino.cc/en/software)** → Microcontroller programming for glove sensors  
+
+### **3️⃣ Hardware Components**  
+- **Webcam** → Captures hand movements for gesture recognition  
+- **Arduino-compatible glove sensors** → Detects hand gestures & color changes  
+- **Buzzer module** → Notifies users when they move out of bounds  
+- **Wi-Fi enabled microcontroller (ESP32/ESP8266)** → Sends gesture data over MQTT  
+
+### **4️⃣ Programming Languages**  
+- **Python** → Main backend logic & real-time processing  
+- **C++ (Arduino Sketches)** → Microcontroller firmware for gloves  
+- **MQTT Protocol** → Wireless data exchange for sensor integration  
+
+---
+
+## 📃 Installation & Setup  
+
+### **🖥️ Software Requirements**  
+Ensure you have **Python 3.12+** installed. Then, install the required dependencies:  
+
+```bash
+pip install opencv-python numpy cvzone paho-mqtt
