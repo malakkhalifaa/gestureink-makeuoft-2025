@@ -85,7 +85,8 @@ Ensure you have **Python 3.12+** installed. Then, install the required dependenc
 pip install opencv-python numpy cvzone paho-mqtt
 ```
 
-🔌 Hardware Setup
+
+##🔌 Hardware Setup
 ### **1️⃣ Connect the ESP32/ESP8266 to your computer and upload the glove firmware using Arduino IDE.
 ### **2️⃣ Attach flex sensors to the glove to detect finger positions.
 ### **3️⃣ Connect the buzzer to the microcontroller for out-of-bounds alerts.
