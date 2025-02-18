@@ -12,9 +12,10 @@ This project integrates with **wearable technology** (glove sensors + MQTT commu
 https://youtu.be/lAq6rWafrmU
 
 ### 🎨 **Hand Gesture Writing in Action**  
-Gesture Drawing(![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
-)  
 > *Index & Middle Fingers Up - Start Drawing*  
+Gesture Drawing(![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
+
+
 
 ### 🎨 **Changing Colors via MQTT**  
 ![Color Change](images/color_change.png)  
