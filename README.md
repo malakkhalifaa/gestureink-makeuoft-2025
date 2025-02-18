@@ -8,19 +8,13 @@ This project integrates with **wearable technology** (glove sensors + MQTT commu
 
 ## 📸 Demo & Screenshots  
 
-### 🖼️ Demo Video URL
+### 🎨 **Changing Colors via MQTT, Look at Demo video below**
 https://youtu.be/lAq6rWafrmU
+[PHOTO-2025-02-17-08-41-46](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)
 
 ### 🎨 **Hand Gesture Writing in Action**  
 > *Index & Middle Fingers Up - Start Drawing*  
 Gesture Drawing![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
-
-
-
-### 🎨 **Changing Colors via MQTT**  
-> *RGB values dynamically update from glove-based sensor inputs.*  
-![Color Change]![PHOTO-2025-02-17-08-41-46](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9) 
-
 
 ---
 
@@ -64,7 +58,7 @@ Gesture Drawing![Screenshot (264)](https://github.com/user-attachments/assets/43
 - **Webcam** (built-in or external) for hand tracking  
 - **Arduino-compatible glove sensors** for color switching  
 - **Buzzer module** for boundary notifications  
-- **Wi-Fi enabled microcontroller** (ESP32/ESP8266) for MQTT messaging  
+
 
 ---
 
