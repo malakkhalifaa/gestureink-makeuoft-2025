@@ -18,8 +18,9 @@ Gesture Drawing![Screenshot (264)](https://github.com/user-attachments/assets/43
 
 
 ### 🎨 **Changing Colors via MQTT**  
-![Color Change](images/color_change.png)  
 > *RGB values dynamically update from glove-based sensor inputs.*  
+![Color Change]![PHOTO-2025-02-17-08-41-46](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9) 
+
 
 ---
 
