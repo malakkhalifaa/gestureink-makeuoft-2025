@@ -83,26 +83,14 @@ Ensure you have **Python 3.12+** installed. Then, install the required dependenc
 
 ```bash
 pip install opencv-python numpy cvzone paho-mqtt
+```
 
-🚀 How to Run the Project
-1️⃣ Start the Python Gesture Tracking System:
+🔌 Hardware Setup
+1️⃣ Connect the ESP32/ESP8266 to your computer and upload the glove firmware using Arduino IDE.
+2️⃣ Attach flex sensors to the glove to detect finger positions.
+3️⃣ Connect the buzzer to the microcontroller for out-of-bounds alerts.
+4️⃣ Configure MQTT broker and update the broker address in the Python script.
 
-bash
-Copy
-Edit
-python gesture_ink.py
-2️⃣ Ensure your MQTT broker is running.
-If using Mosquitto MQTT, start the service:
-
-bash
-Copy
-Edit
-mosquitto
-3️⃣ Wear the Glove & Start Drawing!
-
-Move your hand in front of the webcam.
-Change colors dynamically with finger gestures.
-Undo and reset as needed.
 🔥 Future Improvements
 1️⃣ AI-Based Handwriting Recognition
 Convert air-written text into actual editable text using machine learning models.
@@ -116,28 +104,4 @@ Support for Leap Motion or Meta Quest hand tracking.
 4️⃣ Cloud Sync & Multi-Device Support
 Store gesture-based notes in the cloud for cross-device access.
 Integrate Firebase or Google Drive API to save & retrieve handwritten data.
-📬 Contributors & Contact
-👤 Your Name - GitHub Profile
-📩 Email: your@email.com
-
-🤝 Feel free to open an issue or contribute to this project! 🚀
-
-markdown
-Copy
-Edit
-
-### **Why this is perfect for VS Code & GitHub?**  
-✅ **Fully Copy-Pasteable Markdown Format** → Works instantly in **README.md**.  
-✅ **Clickable Demo Link** → Makes it easy to access the project demo.  
-✅ **Code Blocks for Install & Setup** → **Easy to copy-paste into terminal**.  
-✅ **Bold & Emoji Formatting** → **Clearer sections & features**.  
-✅ **Future Improvements Section** → **Scalable ideas for expansion**.  
-
-🚀 **You're all set!** This is **fully detailed, well-structured, and ready to go**. Let me know if you want any additional tweaks!🔥🔥
-
-
-
-
-
-
 
