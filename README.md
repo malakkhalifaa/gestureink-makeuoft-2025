@@ -13,7 +13,7 @@ https://youtu.be/lAq6rWafrmU
 
 ### 🎨 **Hand Gesture Writing in Action**  
 > *Index & Middle Fingers Up - Start Drawing*  
-Gesture Drawing(![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
+Gesture Drawing![Screenshot (264)](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
 
 
