@@ -59,15 +59,13 @@ This project integrates **gesture-based control** with **wearable sensors**, mak
 - **[NumPy](https://numpy.org/)** → Image processing and mathematical operations  
 
 ### **2️⃣ IoT & MQTT-Based Communication**  
-- **[paho-mqtt](https://www.eclipse.org/paho/)** → MQTT protocol for real-time data exchange  
-- **[ESP32/ESP8266](https://www.espressif.com/)** → Wi-Fi-enabled microcontroller for sending RGB color updates  
+- **[paho-mqtt](https://www.eclipse.org/paho/)** → MQTT protocol for real-time data exchange   
 - **[Arduino IDE](https://www.arduino.cc/en/software)** → Microcontroller programming for glove sensors  
 
 ### **3️⃣ Hardware Components**  
 - **Webcam** → Captures hand movements for gesture recognition  
 - **Arduino-compatible glove sensors** → Detects hand gestures & color changes  
-- **Buzzer module** → Notifies users when they move out of bounds  
-- **Wi-Fi enabled microcontroller (ESP32/ESP8266)** → Sends gesture data over MQTT  
+- **Buzzer module** → Notifies users when they move out of bounds   
 
 ### **4️⃣ Programming Languages**  
 - **Python** → Main backend logic & real-time processing  
