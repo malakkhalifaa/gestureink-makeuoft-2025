@@ -16,11 +16,15 @@ This project integrates **gesture-based control** with **wearable sensors**, mak
 
 ### 🎨 **Group Photo**  
 > **🧤 During our presentation at MakeUoft 2025 (Canada's Largest Makeathon), we showed the glove gensors dynamically adjusting RGB values**  
-![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)  
+![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)
+![Screenshot (652)](https://github.com/user-attachments/assets/cd8db60f-47e6-4059-8a00-c65dbf8d277c)
+
 
 ---
 
-## 🚀 Key Features  
+## 🚀 **Key Features**
+![Front View](https://github.com/user-attachments/assets/d40370bc-bf53-471b-90fa-316986b40406)
+
 
 ### **1️⃣ ✏️ Gesture-Based Drawing & Writing**  
 - **✌️ Index & Middle Finger Up** → Start drawing  
