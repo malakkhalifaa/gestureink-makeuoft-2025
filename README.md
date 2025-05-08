@@ -1,115 +1,115 @@
-# ✨ Gesture Ink - Hand Gesture Writing & Drawing System  
+# ✨ Gesture Ink – Hand Gesture Writing & Drawing System
 
-Gesture Ink is a **real-time hand gesture-controlled writing system** powered by **computer vision, MQTT communication, and wearable technology**. It allows users to **write and draw using only hand movements**, with **dynamic color selection** and **buzzer alerts** for out-of-bounds gestures.  
+**Gesture Ink** is a real-time, no-touch writing and drawing system powered by **computer vision**, **MQTT**, and **wearable technology**.  
+It lets users write or draw mid-air using hand gestures alone — perfect for **digital art**, **assistive tools**, and **smart presentations**.
 
-This project integrates **gesture-based control** with **wearable sensors**, making it an innovative tool for **digital art, interactive presentations, assistive technology, and smart interfaces**.  
+Developed at **MakeUofT 2025 (Canada’s Largest Makeathon)**, this project was awarded recognition for its innovation in **gesture-based interfaces** and **IoT integration**.
 
 ---
 
-## 📸 Demo & Screenshots  
+## 📽️ Demo & Live Preview
 
-### 🎥 **[Check out the Demo](https://youtu.be/lAq6rWafrmU)**  
+🎥 **[Watch the Full Demo on YouTube](https://youtu.be/lAq6rWafrmU)**
 
-### 🖼️ **Hand Gesture Writing in Action**  
-> **✌️ Index & Middle Fingers Up** → Start drawing  
+---
+
+## 🖼️ Highlights from Gesture Ink
+
+### ✍️ Gesture-Based Drawing  
+> ✌️ Two fingers up → Draw mode  
 ![Gesture Drawing](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
-### 🎨 **Group Photo**  
-> **🧤 During our presentation at MakeUoft 2025 (Canada's Largest Makeathon), we showed the glove gensors dynamically adjusting RGB values**  
+### 🌈 Dynamic Color Switching via Glove Sensors  
+> 🧤 Real-time RGB control during our MakeUofT demo  
 ![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)
-![Screenshot (652)](https://github.com/user-attachments/assets/cd8db60f-47e6-4059-8a00-c65dbf8d277c)
 
-
----
-
-## 🚀 **Key Features**
-![Front View](https://github.com/user-attachments/assets/d40370bc-bf53-471b-90fa-316986b40406)
-
-
-### **1️⃣ ✏️ Gesture-Based Drawing & Writing**  
-- **✌️ Index & Middle Finger Up** → Start drawing  
-- **☝️ Index Finger Up** → Continue drawing  
-- **🤟 Three Fingers Up** → Undo last annotation  
-- **🛑 Closed Fist** → Stop drawing  
-
-### **2️⃣ 🌈 Dynamic Pen Color Selection via MQTT**  
-- **RGB values update dynamically** based on **glove-based sensor inputs**.  
-- **LED-based glove controls** allow users to switch colors **without touching a screen**.  
-
-### **3️⃣ 🎯 Boundary Notification System**  
-- **Buzzer Alert 🔊** when the hand moves **out of the drawing area**.  
-- **Real-time feedback** prevents accidental strokes outside the gesture region.  
-
-### **4️⃣ 📡 MQTT Integration for Smart Interactions**  
-- **Receives real-time RGB values** from an external **glove-based sensor system**.  
-- **Publishes buzzer alerts** when the user moves outside a defined drawing region.  
-- **Subscribes to multiple MQTT topics** to enable seamless data exchange.  
-
-### **5️⃣ 📷 Real-Time Webcam Hand Tracking**  
-- **Hand gesture recognition** using **OpenCV & cvzone**.  
-- **Live preview window** for real-time interaction feedback.  
-
-### **6️⃣ 🔄 Undo & Clear Options**  
-- **Undo previous strokes** with **hand gestures**.  
-- **Clear the screen** with a **custom reset action**.  
+![Team Presentation](https://github.com/user-attachments/assets/cd8db60f-47e6-4059-8a00-c65dbf8d277c)
 
 ---
 
-## 🛠️ Technologies Used  
+## 🚀 Core Features
 
-### **1️⃣ Computer Vision & Gesture Recognition**  
-- **[OpenCV](https://opencv.org/)** → Real-time hand tracking & gesture detection  
-- **[cvzone](https://github.com/cvzone/cvzone)** → Simplified hand detection using MediaPipe  
-- **[NumPy](https://numpy.org/)** → Image processing and mathematical operations  
+### 1️⃣ ✏️ Gesture-Based Drawing & Writing  
+- ✌️ Two fingers up → Start drawing  
+- ☝️ One finger up → Continue drawing  
+- 🤟 Three fingers up → Undo  
+- ✊ Fist → Stop drawing  
 
-### **2️⃣ IoT & MQTT-Based Communication**  
-- **[paho-mqtt](https://www.eclipse.org/paho/)** → MQTT protocol for real-time data exchange   
-- **[Arduino IDE](https://www.arduino.cc/en/software)** → Microcontroller programming for glove sensors  
+### 2️⃣ 🌈 Dynamic Color Selection (MQTT-Driven)  
+- Live RGB changes from glove sensors  
+- Color switching without touching the screen  
 
-### **3️⃣ Hardware Components**  
-- **Webcam** → Captures hand movements for gesture recognition  
-- **Arduino-compatible glove sensors** → Detects hand gestures & color changes  
-- **Buzzer module** → Notifies users when they move out of bounds   
+### 3️⃣ 🔊 Boundary Detection + Buzzer Alerts  
+- Sends out-of-bounds alert via MQTT  
+- Glove buzzer provides tactile feedback  
 
-### **4️⃣ Programming Languages**  
-- **Python** → Main backend logic & real-time processing  
-- **C++ (Arduino Sketches)** → Microcontroller firmware for gloves  
-- **MQTT Protocol** → Wireless data exchange for sensor integration  
+### 4️⃣ 📡 Real-Time MQTT Communication  
+- Subscribes to live glove sensor values  
+- Publishes buzzer triggers and actions  
+
+### 5️⃣ 📷 Computer Vision + Hand Tracking  
+- Uses OpenCV and cvzone for gesture detection  
+- Real-time visual feedback and accuracy  
+
+### 6️⃣ 🔄 Undo + Reset Capabilities  
+- Gesture-based undo action  
+- Clear screen with a reset motion  
 
 ---
 
-## 📃 Installation & Setup  
+## 🛠️ Tech Stack & Tools
 
-### **🖥️ Software Requirements**  
-Ensure you have **Python 3.12+** installed. Then, install the required dependencies:  
+### 💻 Software  
+- **Python 3.12+**  
+- **OpenCV** for video capture and processing  
+- **cvzone + MediaPipe** for hand tracking  
+- **NumPy** for image manipulation  
+- **paho-mqtt** for communication
+
+### 🔧 Hardware  
+- **Arduino glove sensors** (flex sensors + RGB)  
+- **Buzzer module**  
+- **ESP32 / ESP8266** for MQTT connectivity  
+- **Webcam** for hand tracking  
+
+### 🔗 Languages & Protocols  
+- **Python** → main logic  
+- **C++ (Arduino IDE)** → glove firmware  
+- **MQTT** → real-time, wireless communication  
+
+---
+
+### 🔌 Hardware Setup
+
+Connect the **ESP32** and upload the glove firmware via **Arduino IDE**.  
+Attach **flex sensors** to detect finger gestures.  
+Connect a **buzzer** for out-of-bound alerts.  
+Set up an **MQTT broker** (e.g., Mosquitto) and configure IPs in the Python script.
+
+---
+
+### 🔮 Future Enhancements
+
+#### ✍️ AI-Based Handwriting Recognition  
+- Translate air-written strokes into editable text  
+- Potential use of Google’s handwriting API or ML model
+
+#### 🖊️ Pressure-Based Brush Control  
+- Use sensor data to vary stroke thickness  
+- Speed-sensitive brush dynamics
+
+#### 🕶️ VR/AR Compatibility  
+- Create a virtual whiteboard in 3D  
+- Support Leap Motion / Meta Quest tracking
+
+#### ☁️ Cloud Sync & Multi-Device Support  
+- Store notes/drawings via Firebase or Google Drive  
+- Access from any device
+## 🧪 Installation Guide
+
+### ✅ Install Dependencies  
+Make sure you have Python installed, then run:
 
 ```bash
 pip install opencv-python numpy cvzone paho-mqtt
-```
-
-🔌 Hardware Setup
-🛠️ Step 1: Connect the ESP32/ESP8266
-Plug the ESP32/ESP8266 into your computer and upload the glove firmware using Arduino IDE.
-
-✋ Step 2: Attach Flex Sensors
-Mount flex sensors onto the glove to detect finger positions.
-
-🔊 Step 3: Connect the Buzzer
-Attach a buzzer to the microcontroller for out-of-bounds alerts.
-
-🌐 Step 4: Configure MQTT Broker
-Set up an MQTT broker and update the broker address in the Python script.
-
-🔥 Future Improvements
-- **✍️ 1️⃣ **AI-Based Handwriting Recognition
-🧠 Convert air-written text into actual editable text using machine learning models.
-🔗 Potential integration with Google Handwriting Recognition API.
-- **✏️ 2️⃣** Customizable Drawing Thickness & Pressure Sensitivity
-🎚️ Allow users to adjust brush size based on finger pressure using sensor data.
-📈 Dynamic brush thickness scaling with movement speed.
-- **🎨 3️⃣** Integration with VR/AR Systems
-🕶️ Create a virtual whiteboard for writing & drawing in 3D space.
-🎮 Support for Leap Motion or Meta Quest hand tracking.
-- **☁️ 4️⃣** Cloud Sync & Multi-Device Support
-💾 Store gesture-based notes in the cloud for cross-device access.
-🔗 Integrate Firebase or Google Drive API for storing & retrieving handwritten data.
+---
