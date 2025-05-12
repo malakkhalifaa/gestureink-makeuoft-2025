@@ -112,4 +112,13 @@ Make sure you have Python installed, then run:
 
 ```bash
 pip install opencv-python numpy cvzone paho-mqtt
----
+```
+
+## 🎯 Final Thoughts
+
+**Gesture Ink** pushes the boundaries of how we interact with technology — no screens, no touch, just natural movement.  
+From **assistive tech** to **immersive presentations**, this system showcases how **computer vision** and **IoT** can come together to create intuitive, hands-free interfaces.
+
+Whether you’re an **artist**, **educator**, **developer**, or just curious — we invite you to **explore, expand**, and **enhance** the future of gesture-based interaction.
+
+> 🚀 Built with passion at **MakeUofT 2025** — and just getting started.
