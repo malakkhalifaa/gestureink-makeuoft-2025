@@ -16,42 +16,42 @@ Developed at **MakeUofT 2025 (Canada’s Largest Makeathon)**, this project was 
 ##  Highlights from Gesture Ink
 
 ### Gesture-Based Drawing  
-> ✌️ Two fingers up → Draw mode  
+> Two fingers up → Draw mode  
 ![Gesture Drawing](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
-### 🌈 Dynamic Color Switching via Glove Sensors  
-> 🧤 Real-time RGB control during our MakeUofT demo  
+###  Dynamic Color Switching via Glove Sensors  
+>  Real-time RGB control during our MakeUofT demo  
 ![Color Change](https://github.com/user-attachments/assets/93cde095-60f9-4f15-bd4d-9df8ed427bb9)
 
 ![Team Presentation](https://github.com/user-attachments/assets/cd8db60f-47e6-4059-8a00-c65dbf8d277c)
 
 ---
 
-## 🚀 Core Features
+##  Core Features
 
-### 1️⃣ ✏️ Gesture-Based Drawing & Writing  
+###  Gesture-Based Drawing & Writing  
 - ✌️ Two fingers up → Start drawing  
 - ☝️ One finger up → Continue drawing  
 - 🤟 Three fingers up → Undo  
 - ✊ Fist → Stop drawing  
 
-### 2️⃣ 🌈 Dynamic Color Selection (MQTT-Driven)  
+### Dynamic Color Selection (MQTT-Driven)  
 - Live RGB changes from glove sensors  
 - Color switching without touching the screen  
 
-### 3️⃣ 🔊 Boundary Detection + Buzzer Alerts  
+###  Boundary Detection + Buzzer Alerts  
 - Sends out-of-bounds alert via MQTT  
 - Glove buzzer provides tactile feedback  
 
-### 4️⃣ 📡 Real-Time MQTT Communication  
+### Real-Time MQTT Communication  
 - Subscribes to live glove sensor values  
 - Publishes buzzer triggers and actions  
 
-### 5️⃣ 📷 Computer Vision + Hand Tracking  
+###  Computer Vision + Hand Tracking  
 - Uses OpenCV and cvzone for gesture detection  
 - Real-time visual feedback and accuracy  
 
-### 6️⃣ 🔄 Undo + Reset Capabilities  
+### Undo + Reset Capabilities  
 - Gesture-based undo action  
 - Clear screen with a reset motion  
 
