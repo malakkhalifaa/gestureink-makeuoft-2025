@@ -1,4 +1,4 @@
-# ✨ Gesture Ink – Hand Gesture Writing & Drawing System
+# Gesture Ink – Hand Gesture Writing & Drawing System
 
 **Gesture Ink** is a real-time, no-touch writing and drawing system powered by **computer vision**, **MQTT**, and **wearable technology**.  
 It lets users write or draw mid-air using hand gestures alone — perfect for **digital art**, **assistive tools**, and **smart presentations**.
@@ -7,15 +7,15 @@ Developed at **MakeUofT 2025 (Canada’s Largest Makeathon)**, this project was 
 
 ---
 
-## 📽️ Demo & Live Preview
+## 📽Demo & Live Preview
 
-🎥 **[Watch the Full Demo on YouTube](https://youtu.be/lAq6rWafrmU)**
+ **[Watch the Full Demo on YouTube](https://youtu.be/lAq6rWafrmU)**
 
 ---
 
-## 🖼️ Highlights from Gesture Ink
+##  Highlights from Gesture Ink
 
-### ✍️ Gesture-Based Drawing  
+### Gesture-Based Drawing  
 > ✌️ Two fingers up → Draw mode  
 ![Gesture Drawing](https://github.com/user-attachments/assets/432637c5-4906-4aa1-b9c5-b3850cd591fe)
 
@@ -57,29 +57,29 @@ Developed at **MakeUofT 2025 (Canada’s Largest Makeathon)**, this project was 
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## Tech Stack & Tools
 
-### 💻 Software  
+### Software  
 - **Python 3.12+**  
 - **OpenCV** for video capture and processing  
 - **cvzone + MediaPipe** for hand tracking  
 - **NumPy** for image manipulation  
 - **paho-mqtt** for communication
 
-### 🔧 Hardware  
+### Hardware  
 - **Arduino glove sensors** (flex sensors + RGB)  
 - **Buzzer module**  
 - **ESP32 / ESP8266** for MQTT connectivity  
 - **Webcam** for hand tracking  
 
-### 🔗 Languages & Protocols  
+### Languages & Protocols  
 - **Python** → main logic  
 - **C++ (Arduino IDE)** → glove firmware  
 - **MQTT** → real-time, wireless communication  
 
 ---
 
-### 🔌 Hardware Setup
+### Hardware Setup
 
 Connect the **ESP32** and upload the glove firmware via **Arduino IDE**.  
 Attach **flex sensors** to detect finger gestures.  
@@ -88,37 +88,37 @@ Set up an **MQTT broker** (e.g., Mosquitto) and configure IPs in the Python scri
 
 ---
 
-### 🔮 Future Enhancements
+###  Future Enhancements
 
-#### ✍️ AI-Based Handwriting Recognition  
+#### AI-Based Handwriting Recognition  
 - Translate air-written strokes into editable text  
 - Potential use of Google’s handwriting API or ML model
 
-#### 🖊️ Pressure-Based Brush Control  
+#### Pressure-Based Brush Control  
 - Use sensor data to vary stroke thickness  
 - Speed-sensitive brush dynamics
 
-#### 🕶️ VR/AR Compatibility  
+#### VR/AR Compatibility  
 - Create a virtual whiteboard in 3D  
 - Support Leap Motion / Meta Quest tracking
 
-#### ☁️ Cloud Sync & Multi-Device Support  
+#### Cloud Sync & Multi-Device Support  
 - Store notes/drawings via Firebase or Google Drive  
 - Access from any device
-## 🧪 Installation Guide
+## Installation Guide
 
-### ✅ Install Dependencies  
+### Install Dependencies  
 Make sure you have Python installed, then run:
 
 ```bash
 pip install opencv-python numpy cvzone paho-mqtt
 ```
 
-## 🎯 Final Thoughts
+## Final Thoughts
 
 **Gesture Ink** pushes the boundaries of how we interact with technology — no screens, no touch, just natural movement.  
 From **assistive tech** to **immersive presentations**, this system showcases how **computer vision** and **IoT** can come together to create intuitive, hands-free interfaces.
 
 Whether you’re an **artist**, **educator**, **developer**, or just curious — we invite you to **explore, expand**, and **enhance** the future of gesture-based interaction.
 
-> 🚀 Built with passion at **MakeUofT 2025** — and just getting started.
+> Built with passion at **MakeUofT 2025** — and just getting started.
