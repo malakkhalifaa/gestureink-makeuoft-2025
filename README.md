@@ -7,7 +7,7 @@ Developed at **MakeUofT 2025 (Canada’s Largest Makeathon)**, this project was 
 
 ---
 
-## 📽Demo & Live Preview
+## Demo & Live Preview
 
  **[Watch the Full Demo on YouTube](https://youtu.be/lAq6rWafrmU)**
 
